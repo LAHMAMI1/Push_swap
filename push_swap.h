@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:29 by olahmami          #+#    #+#             */
-/*   Updated: 2023/03/05 21:16:57 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/03/08 19:12:23 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 #define PUSH_SWAP_H
 
 #include "Libft/libft.h"
+#include <stdio.h>
 
-typedef struct s_stack
-{
-	int data;
-	struct s_stack *next;
-} t_stack;
+// typedef struct s_stack
+// {
+// 	int data;
+// 	struct s_stack *next;
+// } t_stack;
 
-char **number(int ac, char **av);
+char **number(char **av);
 
 #endif

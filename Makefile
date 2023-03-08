@@ -6,7 +6,7 @@
 #    By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/26 15:36:54 by olahmami          #+#    #+#              #
-#    Updated: 2023/02/26 15:40:12 by olahmami         ###   ########.fr        #
+#    Updated: 2023/03/08 19:11:16 by olahmami         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC			=	cc
 NAME		=	push_swap
 CFLAGS		=	-Wall -Wextra -Werror
 
-SRCS		=	
+SRCS		=	push_swap.c
 
 LIBS		=	libft.a
 
