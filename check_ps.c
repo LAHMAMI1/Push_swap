@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:14:51 by olahmami          #+#    #+#             */
-/*   Updated: 2023/03/28 12:46:09 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/03/31 17:58:50 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int check_atoi(char *str)
 	while (str[i])
 	{
 		if ((str[i] >= 9 && str[i] <= 13) || ft_isdigit(str[i]) == 0)
-			return(1);
+			return (1);
 		result = result * 10 + str[i] - 48;
 		if (result * sign > INT32_MAX)
 			return (1);
@@ -47,7 +47,7 @@ static int check_atoi(char *str)
 void check_integer(char **num)
 {
 	int i;
-	
+
 	i = 0;
 	while (num[i])
 	{
@@ -81,5 +81,3 @@ void check_dup(char **num)
 		i++;
 	}
 }
-
-

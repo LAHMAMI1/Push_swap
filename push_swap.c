@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:25 by olahmami          #+#    #+#             */
-/*   Updated: 2023/03/28 12:14:28 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/03/31 17:59:16 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,16 @@ char **number(char **av)
 	return(split_av);
 }
 
+// t_stack *fill_stack(char **split_av, t_stack stack)
+// {
+	
+// }
+
+
 int main(int ac, char **av)
 {
-	// t_stack a;
-	// t_stack b;
+	t_stack a;
+	t_stack b;
 	char **split_av;
 
 	if (ac < 2)
@@ -42,6 +48,7 @@ int main(int ac, char **av)
 	split_av = number(av);
 	check_integer(split_av);
 	check_dup(split_av);
+	
 	int i = 0;
 	while (split_av[i])
 	{
