@@ -39,8 +39,8 @@ char **number(char **av)
 
 int main(int ac, char **av)
 {
-	t_stack a;
-	t_stack b;
+	//t_stack a;
+	//t_stack b;
 	char **split_av;
 
 	if (ac < 2)

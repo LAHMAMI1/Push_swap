@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:29 by olahmami          #+#    #+#             */
-/*   Updated: 2023/03/31 17:56:41 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/05 18:09:05 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 typedef struct s_stack
 {
-	int data;
+	int content;
 	struct s_stack *next;
 } t_stack;
 
@@ -35,8 +35,12 @@ void check_integer(char **num);
 void check_dup(char **num);
 
 //utils
-t_stack *ft_lstnew(int *data);
+t_stack *ft_lstnew(int content);
+void ft_lstadd_front(t_stack **lst, t_stack *new);
+int ft_lstsize(t_stack *lst);
 t_stack	*ft_lstlast(t_stack *lst);
 void ft_lstadd_back(t_stack **lst, t_stack *new);
+void ft_lstdelone(t_stack *lst, void (*del)(void*));
+void ft_lstclear(t_stack **lst, void (*del)(void*));
 
 #endif
