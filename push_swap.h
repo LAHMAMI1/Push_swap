@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:29 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/05 18:09:05 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/05 19:23:59 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char **number(char **av);
 
 //check_ps
 void check_integer(char **num);
-void check_dup(char **num);
+void check_dup_sort(char **num);
 
 //utils
 t_stack *ft_lstnew(int content);
