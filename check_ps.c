@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:14:51 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/05 19:23:50 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/06 13:17:28 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void check_integer(char **num)
 	}
 }
 
-void check_dup_sort(char **num)
+void check_dup(char **num)
 {
 	int i;
 	int j;
@@ -71,7 +71,7 @@ void check_dup_sort(char **num)
 		j = i + 1;
 		while (num[j])
 		{
-			if (ft_atoi(num[i]) >= ft_atoi(num[j]))
+			if (ft_atoi(num[i]) == ft_atoi(num[j]))
 			{
 				ft_putstr_fd("Erreur, is duplicate\n", 2);
 				exit(1);
@@ -80,6 +80,32 @@ void check_dup_sort(char **num)
 		}
 		i++;
 	}
+}
+
+void check_sort(char **num)
+{
+	int i;
+	int j;
+
+	i = 0;
+	while (num[i])
+	{
+		j = i + 1;
+		while (num[j])
+		{
+			if (ft_atoi(num[i]) > ft_atoi(num[j]))
+				return ;
+			j++;
+		}
+		i++;
+	}
 	ft_putstr_fd("Already sorted\n", 1);
 	exit(0);
+}
+
+void check_all(char **num)
+{
+	check_integer(num);
+	check_dup(num);
+	check_sort(num);
 }

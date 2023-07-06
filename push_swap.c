@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:25 by olahmami          #+#    #+#             */
-/*   Updated: 2023/03/31 17:59:16 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/06 13:16:33 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,7 @@ int main(int ac, char **av)
 	if (ac < 2)
 		exit(0);
 	split_av = number(av);
-	check_integer(split_av);
-	check_dup(split_av);
+	check_all(split_av);
 	
 	int i = 0;
 	while (split_av[i])
