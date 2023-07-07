@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:29 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/06 13:16:41 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/07 14:12:34 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,12 @@ typedef struct s_stack
 char **number(char **av);
 
 //check_ps
+int check_empty(char *num);
 void check_integer(char **num);
 void check_dup(char **num);
 void check_sort(char **num);
 void check_all(char **num);
+void print_error();
 
 //utils
 t_stack *ft_lstnew(int content);

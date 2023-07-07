@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:25 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/06 13:16:33 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/07 17:28:42 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@ char **number(char **av)
 	char **split_av;
 	
 	join_av = ft_strdup("");
+	i = 1;
+	while (av[i])
+	{
+		if (check_empty(av[i]) == 0)
+			print_error();
+		i++;
+	}
 	i = 1;
 	while (av[i])
 	{
