@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:29 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/07 14:12:34 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/10 18:50:02 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,20 @@ typedef struct s_stack
 	struct s_stack *next;
 } t_stack;
 
-// typedef struct s_ps
-// {
+typedef struct s_ps
+{
+	t_stack *a;
+	t_stack *b;
 	
-// } t_ps;
+} t_ps;
 
 //push_swap.c
 char **number(char **av);
+void tab_to_list(char **split_av, t_ps *stack);
+void swap(t_stack** src);
+void push(t_stack **src, t_stack **dst);
+void rotate(t_stack** src);
+void reverse_rotate(t_stack **src);
 
 //check_ps
 int check_empty(char *num);
