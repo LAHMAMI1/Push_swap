@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:25 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/10 19:00:11 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/11 17:21:52 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,35 +60,31 @@ int main(int ac, char **av)
 	char **split_av;
 
 	if (ac < 2)
-		exit(0);
+		exit(0);		
+	stack.a = NULL;
+	stack.b = NULL;
 	split_av = number(av);
 	check_all(split_av);
 	tab_to_list(split_av, &stack);
+	if (ac == 3)
+	{
+		sa(&stack.a);
+		return (0);
+	}
+	
+	
+	// pb(&stack.a, &stack.b);
 	// while (stack.a)
 	// {
 	// 	printf("stack->(%d)\n", stack.a->content);
 	// 	stack.a = stack.a->next;
 	// }
 	
-	// swap(&stack.a);
-	// printf("stack->(%d)\n", stack.a->content);
-	// printf("stack->(%d)\n\n", stack.a->next->content);
+	// while (stack.b)
+	// {
+	// 	printf("stack b->(%d)\n", stack.b->content);
+	// 	stack.b = stack.b->next;
+	// }
 
-	// push(&stack.a, &stack.b);
-	// printf("stack a->(%d)\n", stack.a->content);
-	// printf("stack b->(%d)\n\n", stack.b->content);
-	
-	// rotate(&stack.a);
-	// printf("stack->(%d)\n", stack.a->content);
-	// printf("stack->(%d)\n", stack.a->next->content);
-	// printf("stack->(%d)\n", stack.a->next->next->content);
-	// printf("stack->(%d)\n\n", stack.a->next->next->next->content);
-
-	reverse_rotate(&stack.a);
-	printf("stack->(%d)\n", stack.a->content);
-	printf("stack->(%d)\n", stack.a->next->content);
-	printf("stack->(%d)\n", stack.a->next->next->content);
-	printf("stack->(%d)\n\n", stack.a->next->next->next->content);
-	
-	return 0;
+	return (0);
 }

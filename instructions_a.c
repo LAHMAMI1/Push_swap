@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   instructions_a.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 23:11:09 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/11 15:20:33 by olahmami         ###   ########.fr       */
+/*   Created: 2023/07/11 11:10:14 by olahmami          #+#    #+#             */
+/*   Updated: 2023/07/11 17:20:14 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void sa(t_stack **a)
 {
-	void	*pointer;
+	swap(a);
+	ft_putstr_fd("sa\n", 1);
+}
 
-	if (size && count >= SIZE_MAX / size)
-		return (0);
-	pointer = malloc(count * size);
-	if (!pointer)
-		return (0);
-	ft_bzero(pointer, count * size);
-	return (pointer);
+void pa(t_stack **a, t_stack **b)
+{
+	push(b, a);
+	ft_putstr_fd("pa\n", 1);
+}
+
+void ra(t_stack **a)
+{
+	rotate(a);
+	ft_putstr_fd("ra\n", 1);
+}
+
+void rra(t_stack **a)
+{
+	reverse_rotate(a);
+	ft_putstr_fd("rra\n", 1);
 }

@@ -6,20 +6,24 @@
 #    By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/26 15:36:54 by olahmami          #+#    #+#              #
-#    Updated: 2023/07/10 18:51:17 by olahmami         ###   ########.fr        #
+#    Updated: 2023/07/11 17:14:10 by olahmami         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC			=	cc
 NAME		=	push_swap
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror #-g -fsanitize=address
 
 SRCS		=	push_swap.c \
 				check_ps.c \
 				ft_lstnew.c \
 				ft_lstlast.c \
 				ft_lstadd_back.c \
-				utils.c
+				ft_lstsize.c \
+				utils.c \
+				instructions_a.c \
+				instructions_b.c \
+				instructions_both.c \
 
 LIBS		=	libft.a
 

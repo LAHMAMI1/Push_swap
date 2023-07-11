@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:29 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/10 18:50:02 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/11 11:27:59 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,19 @@ void swap(t_stack** src);
 void push(t_stack **src, t_stack **dst);
 void rotate(t_stack** src);
 void reverse_rotate(t_stack **src);
+
+//instructions.c
+void sa(t_stack **a);
+void sb(t_stack **b);
+void ss(t_stack **a, t_stack **b);
+void pa(t_stack **a, t_stack **b);
+void pb(t_stack **a, t_stack **b);
+void ra(t_stack **a);
+void rb(t_stack **b);
+void rr(t_stack **a, t_stack **b);
+void rra(t_stack **a);
+void rrb(t_stack **b);
+void rrr(t_stack **a, t_stack **b);
 
 //check_ps
 int check_empty(char *num);

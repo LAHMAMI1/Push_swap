@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:14:51 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/07 17:42:31 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/11 15:56:38 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ static int check_atoi(char *str)
 			sign *= -1;
 		i++;
 	}
-	if ((str[i - 1] == '-' || str[i - 1] == '+')
-		&& (str[i] == '\0' || str[i] == '+'))
-		return (1);
+	// if ((str[i - 1] == '-' || str[i - 1] == '+')
+	// 	&& (str[i] == '\0' || str[i] == '+'))
+	// 	return (1);
 	while (str[i])
 	{
 		if ((str[i] >= 9 && str[i] <= 13) || ft_isdigit(str[i]) == 0)
