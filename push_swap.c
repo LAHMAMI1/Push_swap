@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:25 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/11 17:21:52 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/12 19:31:23 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,10 @@ int main(int ac, char **av)
 	split_av = number(av);
 	check_all(split_av);
 	tab_to_list(split_av, &stack);
-	if (ac == 3)
-	{
-		sa(&stack.a);
-		return (0);
-	}
 	
-	
-	// pb(&stack.a, &stack.b);
+	// sort_2(&stack.a, ac);
+	// sort_3(&stack.a, ac);
+	sort_4e5(&stack);
 	// while (stack.a)
 	// {
 	// 	printf("stack->(%d)\n", stack.a->content);

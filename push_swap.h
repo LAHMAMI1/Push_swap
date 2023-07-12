@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:29 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/11 11:27:59 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/12 18:54:15 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 typedef struct s_stack
 {
 	int content;
+	int size_a;
 	struct s_stack *next;
 } t_stack;
 
@@ -26,10 +27,9 @@ typedef struct s_ps
 {
 	t_stack *a;
 	t_stack *b;
-	
 } t_ps;
 
-//push_swap.c
+//push_swap
 char **number(char **av);
 void tab_to_list(char **split_av, t_ps *stack);
 void swap(t_stack** src);
@@ -37,7 +37,7 @@ void push(t_stack **src, t_stack **dst);
 void rotate(t_stack** src);
 void reverse_rotate(t_stack **src);
 
-//instructions.c
+//instructions
 void sa(t_stack **a);
 void sb(t_stack **b);
 void ss(t_stack **a, t_stack **b);
@@ -49,6 +49,15 @@ void rr(t_stack **a, t_stack **b);
 void rra(t_stack **a);
 void rrb(t_stack **b);
 void rrr(t_stack **a, t_stack **b);
+
+//sort
+void sort_2(t_stack **a, int ac);
+void sort_3(t_stack **a);
+void sort_4e5(t_ps *stack);
+//sort_utils
+int max_location(t_stack *a);
+int min_a(t_stack *a);
+void min_to_top(t_stack **a, int min);
 
 //check_ps
 int check_empty(char *num);
