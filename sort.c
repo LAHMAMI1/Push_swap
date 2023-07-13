@@ -6,15 +6,16 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 11:19:37 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/12 19:33:45 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/13 18:45:57 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void sort_2(t_stack **a, int ac)
+void sort_2(t_stack **a)
 {
-	if (ac == 3)
+	(*a)->size_a = ft_lstsize(*a);
+	if ((*a)->size_a == 2)
 	{
 		sa(a);
 		exit(0);
@@ -47,8 +48,9 @@ void sort_4e5(t_ps *stack)
 	i = 0;
 	while (i < size3)
 	{
-		min_to_top(&stack->a, min_a(stack->a));
+		min_to_top(&stack->a);
 		pb(&stack->a, &stack->b);
+		// printf("stack b->(%d)\n", stack->b->content);
 		i++;
 	}
 	sort_3(&stack->a);

@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:29 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/12 18:54:15 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/13 14:49:47 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,13 @@ void rrb(t_stack **b);
 void rrr(t_stack **a, t_stack **b);
 
 //sort
-void sort_2(t_stack **a, int ac);
+void sort_2(t_stack **a);
 void sort_3(t_stack **a);
 void sort_4e5(t_ps *stack);
 //sort_utils
 int max_location(t_stack *a);
-int min_a(t_stack *a);
-void min_to_top(t_stack **a, int min);
+int min_location(t_stack *a);
+void min_to_top(t_stack **a);
 
 //check_ps
 int check_empty(char *num);
