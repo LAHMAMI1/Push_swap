@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:25 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/13 19:15:17 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/15 12:03:56 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ int main(int ac, char **av)
 	sort_2(&stack.a);
 	sort_3(&stack.a);
 	sort_4e5(&stack);
+	// sort_100(&stack);
+	
 	// while (stack.a)
 	// {
 	// 	printf("stack->(%d)\n", stack.a->content);

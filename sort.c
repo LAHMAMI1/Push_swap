@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 11:19:37 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/13 18:45:57 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/15 12:04:11 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ void sort_4e5(t_ps *stack)
 	{
 		min_to_top(&stack->a);
 		pb(&stack->a, &stack->b);
-		// printf("stack b->(%d)\n", stack->b->content);
 		i++;
 	}
 	sort_3(&stack->a);
 	while (stack->b)
 		pa(&stack->a, &stack->b);
 }
+
