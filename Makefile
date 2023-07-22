@@ -6,7 +6,7 @@
 #    By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/26 15:36:54 by olahmami          #+#    #+#              #
-#    Updated: 2023/07/12 14:56:54 by olahmami         ###   ########.fr        #
+#    Updated: 2023/07/21 21:34:36 by olahmami         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS		=	push_swap.c \
 				instructions_both.c \
 				sort.c \
 				sort_utils.c \
+				sort_big_utils.c \
 
 LIBS		=	libft.a
 

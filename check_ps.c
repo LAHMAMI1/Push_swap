@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:14:51 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/11 15:56:38 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/22 03:38:34 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,6 @@ void check_all(char **num)
 	check_integer(num);
 	check_dup(num);
 	check_sort(num);
-	
 }
 
 int    check_empty(char *num)
