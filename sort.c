@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 11:19:37 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/15 12:04:11 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/23 02:46:57 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,37 @@ void sort_4e5(t_ps *stack)
 	int size3;
 	int i;
 
-	size3 = ft_lstsize(stack->a) - 3;
-	i = 0;
-	while (i < size3)
+	if (ft_lstsize(stack->a) == 4 || ft_lstsize(stack->a) == 5)
 	{
-		min_to_top(&stack->a);
-		pb(&stack->a, &stack->b);
-		i++;
+		size3 = ft_lstsize(stack->a) - 3;
+		i = 0;
+		while (i < size3)
+		{
+			min_to_top(&stack->a);
+			pb(&stack->a, &stack->b);
+			i++;
+		}
+		sort_3(&stack->a);
+		while (stack->b)
+			pa(&stack->b, &stack->a);
+		exit(0);
 	}
-	sort_3(&stack->a);
-	while (stack->b)
-		pa(&stack->a, &stack->b);
 }
 
+void sort_big(t_ps *stack)
+{
+	int range;
+	int *arr;
+
+	stack->a->size_a = ft_lstsize(stack->a);
+	arr = malloc(sizeof(int) * stack->a->size_a);
+	arr = sort_arr(stack->a, fill_arr(stack->a, arr));
+	if (stack->a->size_a >= 6 && stack->a->size_a <= 15)
+		range = 3;
+	else if (stack->a->size_a <= 100)
+		range = 20;
+	else
+		range = 40;
+	sort_atob(stack, arr, range);
+	free(arr);
+}

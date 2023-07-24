@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:10:14 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/11 17:20:14 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/23 00:08:42 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void sa(t_stack **a)
 	ft_putstr_fd("sa\n", 1);
 }
 
-void pa(t_stack **a, t_stack **b)
+void pa(t_stack **b, t_stack **a)
 {
 	push(b, a);
 	ft_putstr_fd("pa\n", 1);

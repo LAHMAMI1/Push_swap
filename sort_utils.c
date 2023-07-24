@@ -6,30 +6,30 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 14:55:02 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/13 19:16:39 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/23 00:01:46 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int max_location(t_stack *a)
+int max_location(t_stack *ab)
 {
 	int max;
 	int i;
 	int max_i;
 
 	i = 0;
-	max = a->content;
+	max = ab->content;
 	max_i = 0;
-	while (a)
+	while (ab)
 	{
-		if (a->content > max)
+		if (ab->content > max)
 		{
-			max = a->content;
+			max = ab->content;
 			max_i = i;
 		}
 		i++;
-		a = a->next;
+		ab = ab->next;
 	}
 	return (max_i);
 }
@@ -80,6 +80,34 @@ void min_to_top(t_stack **a)
 		{
 			rra(a);
 			min_i--;
+		}
+	}
+}
+
+void max_to_top(t_stack **b)
+{
+	int size;
+	int max_i;
+
+	size = ft_lstsize(*b);
+	max_i = max_location(*b);
+	if (max_i == 0)
+		return ;
+	else if (max_i <= size / 2)
+	{
+		while (max_i > 0)
+		{
+			rb(b);
+			max_i--;
+		}
+	}
+	else if (max_i > size / 2)
+	{
+		max_i = size - max_i;
+		while (max_i > 0)
+		{
+			rrb(b);
+			max_i--;
 		}
 	}
 }

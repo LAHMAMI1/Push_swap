@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:25 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/22 03:43:22 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/25 00:54:32 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,30 +66,10 @@ int main(int ac, char **av)
 	split_av = number(av);
 	check_all(split_av);
 	tab_to_list(split_av, &stack);
-	// sort_2(&stack.a);
-	// sort_3(&stack.a);
+	sort_2(&stack.a);
+	sort_3(&stack.a);
 	// sort_4e5(&stack);
-	// sort_100(&stack);
-	int *arr = NULL;
-	arr = fill_arr(stack.a, arr);
-	arr = sort_arr(&stack.a, arr);
-	int i = 0;
-	while (arr[i])
-	{
-		printf("%d\n", arr[i]);
-		i++;
-	}
-	// while (stack.a)
-	// {
-	// 	printf("stack->(%d)\n", stack.a->content);
-	// 	stack.a = stack.a->next;
-	// }
-	
-	// while (stack.b)
-	// {
-	// 	printf("stack b->(%d)\n", stack.b->content);
-	// 	stack.b = stack.b->next;
-	// }
-
+	// sort_big(&stack);
+	// system("leaks push_swap");
 	return (0);
 }

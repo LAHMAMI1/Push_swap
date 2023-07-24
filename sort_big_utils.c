@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 13:31:34 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/22 03:43:38 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/23 02:01:34 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int *fill_arr(t_stack *a, int *arr)
 {
 	int i;
 
-	arr = malloc(sizeof(int) * ft_lstsize(a));
 	i = 0;
 	while (a)
 	{
@@ -36,17 +35,17 @@ static void ft_swap(int *a, int *b)
 	*b = tmp;
 }
 
-int *sort_arr(t_stack **a,int *arr)
+int *sort_arr(t_stack *a,int *arr)
 {
 	int i;
 	int j;
 	
-	(*a)->size_a = ft_lstsize(*a);
+	a->size_a = ft_lstsize(a);
 	i = 0;
-	while (i < ((*a)->size_a - 1))
+	while (i < (a->size_a - 1))
 	{
 		j = i + 1;
-		while (j < (*a)->size_a)
+		while (j < a->size_a)
 		{
 			if (arr[i] > arr[j])
 				ft_swap(&arr[i], &arr[j]);
@@ -56,3 +55,32 @@ int *sort_arr(t_stack **a,int *arr)
 	}
 	return(arr);
 }
+
+void sort_atob(t_ps *stack, int *arr, int range)
+{
+	int i;
+
+	i = 0;
+	while (stack->a)
+	{
+		if (stack->a->content <= arr[i])
+		{
+			pb(&stack->a, &stack->b);
+			rb(&stack->b);
+			i++;
+		}
+		else if (stack->a->content > arr[i] && stack->a->content <= arr[range + i])
+		{
+			pb(&stack->a, &stack->b);
+			i++;
+		}
+		else
+			ra(&stack->a);
+	}
+	while (stack->b)
+	{
+		max_to_top(&stack->b);
+		pa(&stack->b, &stack->a);
+	}
+} 
+

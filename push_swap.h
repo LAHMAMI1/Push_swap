@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 21:41:29 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/22 03:21:26 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/23 00:09:24 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void reverse_rotate(t_stack **src);
 void sa(t_stack **a);
 void sb(t_stack **b);
 void ss(t_stack **a, t_stack **b);
-void pa(t_stack **a, t_stack **b);
+void pa(t_stack **b, t_stack **a);
 void pb(t_stack **a, t_stack **b);
 void ra(t_stack **a);
 void rb(t_stack **b);
@@ -54,14 +54,17 @@ void rrr(t_stack **a, t_stack **b);
 void sort_2(t_stack **a);
 void sort_3(t_stack **a);
 void sort_4e5(t_ps *stack);
+void sort_big(t_ps *stack);
 //sort_utils
 int max_location(t_stack *a);
 int min_location(t_stack *a);
 void min_to_top(t_stack **a);
+void max_to_top(t_stack **b);
 
 //sort_big_utils
 int *fill_arr(t_stack *a, int *arr);
-int *sort_arr(t_stack **a,int *arr);
+int *sort_arr(t_stack *a,int *arr);
+void sort_atob(t_ps *stack, int *arr, int range);
 
 //check_ps
 int check_empty(char *num);
