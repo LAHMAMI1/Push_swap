@@ -6,54 +6,50 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 21:55:47 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/27 05:39:34 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/27 17:14:00 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-int instructions(t_ps *stack, char *input)
+void	instructions(t_ps *stack, char *input)
 {
-	if (!ft_strncmp(input, "sa\n", 4))
-		return ((sa(&(stack->a))), 1);
-	else if (!ft_strncmp(input, "sb\n", 4))
-		return (sb(&(stack->b)), 1);
-	else if (!ft_strncmp(input, "ss\n", 4))
-		return (ss(&(stack->a), &(stack->b)), 1);
-	else if (!ft_strncmp(input, "pa\n", 4))
-		return (pa(&(stack->b), &(stack->a)), 1);
-	else if (!ft_strncmp(input, "pb\n", 4))
-		return (pb(&(stack->a), &(stack->b)), 1);
-	else if (!ft_strncmp(input, "ra\n", 4))
-		return (ra(&(stack->a)), 1);
-	else if (!ft_strncmp(input, "rb\n", 4))
-		return (rb(&(stack->b)), 1);
-	else if (!ft_strncmp(input, "rr\n", 4))
-		return (rr(&(stack->a), &(stack->b)), 1);
-	else if (!ft_strncmp(input, "rra\n", 5))
-		return (rra(&(stack->a)), 1);
-	else if (!ft_strncmp(input, "rrb\n", 5))
-		return (rrb(&(stack->b)), 1);
-	else if (!ft_strncmp(input, "rrr\n", 5))
-		return (rrr(&(stack->a), &(stack->b)), 1);
+	if (!ft_strcmp(input, "sa\n"))
+		sa(&(stack->a));
+	else if (!ft_strcmp(input, "sb\n"))
+		sb(&(stack->b));
+	else if (!ft_strcmp(input, "ss\n"))
+		ss(&(stack->a), &(stack->b));
+	else if (!ft_strcmp(input, "pa\n"))
+		pa(&(stack->b), &(stack->a));
+	else if (!ft_strcmp(input, "pb\n"))
+		pb(&(stack->a), &(stack->b));
+	else if (!ft_strcmp(input, "ra\n"))
+		ra(&(stack->a));
+	else if (!ft_strcmp(input, "rb\n"))
+		rb(&(stack->b));
+	else if (!ft_strcmp(input, "rr\n"))
+		rr(&(stack->a), &(stack->b));
+	else if (!ft_strcmp(input, "rra\n"))
+		rra(&(stack->a));
+	else if (!ft_strcmp(input, "rrb\n"))
+		rrb(&(stack->b));
+	else if (!ft_strcmp(input, "rrr\n"))
+		rrr(&(stack->a), &(stack->b));
 	else
-		return (0);		
+		(free(input), print_error());
 }
 
-void checker(t_ps *stack)
+void	checker(t_ps *stack)
 {
-	char *input;
+	char	*input;
 
 	input = get_next_line(0);
 	while (input)
 	{
-		if(instructions(stack, input))
-		{
-			free(input);
-			input = get_next_line(0);
-		}
-		else
-			print_error();
+		instructions(stack, input);
+		free(input);
+		input = get_next_line(0);
 	}
 }
 

@@ -6,12 +6,11 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 14:49:13 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/27 05:38:02 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/27 17:12:06 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <stdio.h>
 
 static int	check_buffer_line(char *buffer)
 {
@@ -40,7 +39,6 @@ char	*ft_read(int fd, char *buff)
 	check = 1;
 	while (check_buffer_line(buff) && check != 0)
 	{
-
 		check = read(fd, str, BUFFER_SIZE);
 		if (check == -1)
 		{

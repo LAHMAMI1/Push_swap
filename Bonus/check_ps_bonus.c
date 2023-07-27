@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 02:17:06 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/27 02:17:10 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/27 17:10:28 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	check_dup(char **num)
 int	check_sort(t_stack *a)
 {
 	if (!a || !a->next)
-        return 0;
+		return (0);
 	while (a->next)
 	{
 		if (a->content > a->next->content)
