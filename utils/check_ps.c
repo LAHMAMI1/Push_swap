@@ -6,11 +6,11 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:14:51 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/26 04:49:17 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/28 04:23:47 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int	check_atoi(char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 23:09:21 by olahmami          #+#    #+#             */
-/*   Updated: 2023/03/28 12:09:24 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/27 20:37:27 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,7 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + str[i] - 48;
-		if (result * sign > INT32_MAX)
-			return (1);
-		else if (result * sign < INT32_MIN)
+		if (result * sign > INT32_MAX || result * sign < INT32_MIN)
 			return (1);
 		i++;
 	}

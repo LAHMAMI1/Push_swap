@@ -6,11 +6,11 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 11:19:37 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/26 04:46:11 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/28 04:23:41 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	sort_2(t_stack **a)
 {
@@ -76,6 +76,6 @@ void	sort_big(t_ps *stack)
 	else
 		range = 40;
 	if (stack->a->size_a >= 6)
-		sort_atob(stack, arr, range);
+		sort_ab(stack, arr, range);
 	free(arr);
 }

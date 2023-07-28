@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   instructions_both.c                                :+:      :+:    :+:   */
+/*   instructions_a.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/11 11:10:21 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/26 03:55:12 by olahmami         ###   ########.fr       */
+/*   Created: 2023/07/11 11:10:14 by olahmami          #+#    #+#             */
+/*   Updated: 2023/07/28 04:23:16 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	ss(t_stack **a, t_stack **b)
+void	sa(t_stack **a)
 {
 	swap(a);
-	swap(b);
-	ft_putstr_fd("ss\n", 1);
+	ft_putstr_fd("sa\n", 1);
 }
 
-void	rr(t_stack **a, t_stack **b)
+void	pa(t_stack **b, t_stack **a)
+{
+	push(b, a);
+	ft_putstr_fd("pa\n", 1);
+}
+
+void	ra(t_stack **a)
 {
 	rotate(a);
-	rotate(b);
-	ft_putstr_fd("rr\n", 1);
+	ft_putstr_fd("ra\n", 1);
 }
 
-void	rrr(t_stack **a, t_stack **b)
+void	rra(t_stack **a)
 {
 	reverse_rotate(a);
-	reverse_rotate(b);
-	ft_putstr_fd("rrr\n", 1);
+	ft_putstr_fd("rra\n", 1);
 }

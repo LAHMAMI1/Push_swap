@@ -6,7 +6,7 @@
 #    By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/26 15:36:54 by olahmami          #+#    #+#              #
-#    Updated: 2023/07/27 03:07:36 by olahmami         ###   ########.fr        #
+#    Updated: 2023/07/28 04:33:48 by olahmami         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,22 +16,22 @@ NAME		=	push_swap
 CFLAGS		=	-Wall -Wextra -Werror
 
 SRCS		=	push_swap.c \
-				check_ps.c \
-				ft_lists.c \
-				utils.c \
-				utils2.c \
-				instructions_a.c \
-				instructions_b.c \
-				instructions_both.c \
-				sort.c \
-				sort_utils.c \
-				sort_big_utils.c \
+				./utils/check_ps.c \
+				./utils/ft_lists.c \
+				./utils/utils.c \
+				./utils/utils2.c \
+				./instructions/instructions_a.c \
+				./instructions/instructions_b.c \
+				./instructions/instructions_both.c \
+				./instructions/sort.c \
+				./utils/sort_utils.c \
+				./utils/sort_big_utils.c \
 				
 SRC_BONUS   =   ./bonus/checker_bonus.c \
-				./bonus/check_ps_bonus.c \
-				./bonus/ft_lists_bonus.c \
-				./bonus/utils_bonus.c \
-				./bonus/utils2_bonus.c \
+				./utils/check_ps.c \
+				./utils/ft_lists.c \
+				./utils/utils.c \
+				./utils/utils2.c \
 				./bonus/instructions_a_bonus.c \
 				./bonus/instructions_b_bonus.c \
 				./bonus/instructions_both_bonus.c \

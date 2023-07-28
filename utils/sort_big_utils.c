@@ -6,11 +6,11 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/15 13:31:34 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/26 03:49:09 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/28 04:23:54 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	*fill_arr(t_stack *a, int *arr)
 {
@@ -56,7 +56,7 @@ int	*sort_arr(t_stack *a, int *arr)
 	return (arr);
 }
 
-void	sort_atob(t_ps *stack, int *arr, int range)
+void	sort_ab(t_ps *stack, int *arr, int range)
 {
 	int	i;
 

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_bonus.c                                      :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/27 02:18:59 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/27 16:13:49 by olahmami         ###   ########.fr       */
+/*   Created: 2023/03/31 17:07:51 by olahmami          #+#    #+#             */
+/*   Updated: 2023/07/28 04:24:01 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker_bonus.h"
+#include "../push_swap.h"
 
 void	swap(t_stack **src)
 {
 	t_stack	*tmp;
 
-	if (!(*src) && !(*src)->next)
+	if (!(*src) || !(*src)->next)
 		return ;
 	tmp = (t_stack *)malloc(sizeof(t_stack));
 	tmp->content = (*src)->content;
@@ -59,7 +59,7 @@ void	reverse_rotate(t_stack **src)
 	t_stack	*tmp;
 	t_stack	*last;
 
-	if (!*src && !(*src)->next)
+	if (!*src || !(*src)->next)
 		return ;
 	last = *src;
 	while (last->next->next)

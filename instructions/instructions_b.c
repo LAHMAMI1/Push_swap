@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   instructions_a.c                                   :+:      :+:    :+:   */
+/*   instructions_b.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/11 11:10:14 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/26 03:54:58 by olahmami         ###   ########.fr       */
+/*   Created: 2023/07/11 11:10:18 by olahmami          #+#    #+#             */
+/*   Updated: 2023/07/28 04:23:30 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	sa(t_stack **a)
+void	sb(t_stack **b)
 {
-	swap(a);
-	ft_putstr_fd("sa\n", 1);
+	swap(b);
+	ft_putstr_fd("sb\n", 1);
 }
 
-void	pa(t_stack **b, t_stack **a)
+void	pb(t_stack **a, t_stack **b)
 {
-	push(b, a);
-	ft_putstr_fd("pa\n", 1);
+	push(a, b);
+	ft_putstr_fd("pb\n", 1);
 }
 
-void	ra(t_stack **a)
+void	rb(t_stack **b)
 {
-	rotate(a);
-	ft_putstr_fd("ra\n", 1);
+	rotate(b);
+	ft_putstr_fd("rb\n", 1);
 }
 
-void	rra(t_stack **a)
+void	rrb(t_stack **b)
 {
-	reverse_rotate(a);
-	ft_putstr_fd("rra\n", 1);
+	reverse_rotate(b);
+	ft_putstr_fd("rrb\n", 1);
 }

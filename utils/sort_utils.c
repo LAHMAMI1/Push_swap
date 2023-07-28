@@ -6,11 +6,11 @@
 /*   By: olahmami <olahmami@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 14:55:02 by olahmami          #+#    #+#             */
-/*   Updated: 2023/07/26 03:50:03 by olahmami         ###   ########.fr       */
+/*   Updated: 2023/07/28 04:23:58 by olahmami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	max_location(t_stack *ab)
 {
