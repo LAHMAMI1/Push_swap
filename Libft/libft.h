@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+#include <stdint.h>
 
 int		ft_isdigit(int c);
 int		ft_isprint(int c);

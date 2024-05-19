@@ -27,14 +27,14 @@ SRCS		=	push_swap.c \
 				./utils/sort_utils.c \
 				./utils/sort_big_utils.c \
 				
-SRC_BONUS   =   ./bonus/checker_bonus.c \
+SRC_BONUS   =   ./Bonus/checker_bonus.c \
 				./utils/check_ps.c \
 				./utils/ft_lists.c \
 				./utils/utils.c \
 				./utils/utils2.c \
-				./bonus/instructions_a_bonus.c \
-				./bonus/instructions_b_bonus.c \
-				./bonus/instructions_both_bonus.c \
+				./Bonus/instructions_a_bonus.c \
+				./Bonus/instructions_b_bonus.c \
+				./Bonus/instructions_both_bonus.c \
 				./Get_next_line/get_next_line_utils.c \
 				./Get_next_line/get_next_line.c 
 
